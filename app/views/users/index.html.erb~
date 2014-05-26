@@ -1,6 +1,6 @@
 <h3>Users</h3>
 <a class="btn btn-default" href="/users/new">New User  <span class="glyphicon glyphicon-plus"></span></a>
 <%@users.each do |user|%>
-<p><%=user.first_name%> <%=user.last_name%>, <%=user.email%>  <a href="/users/<%=user.id%>"><span class="glyphicon glyphicon-pencil"></span></a></p>
+<p><%=user.first_name%> <%=user.last_name%>, <%=user.email%>  <a href="/users/<%=user.id%>/edit"><span class="glyphicon glyphicon-pencil"></span></a><%=link_to 'Delete', user_path(user), method: :delete%></p>
 <%end%>
 
